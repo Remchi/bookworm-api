@@ -1,0 +1,2 @@
+MONGODB_URL=mongodb://localhost/bookworm
+JWT_SECRET=secretkeyhere
