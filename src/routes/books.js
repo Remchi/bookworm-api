@@ -9,8 +9,8 @@ router.use(authenticate);
 router.get("/search", (req, res) => {
   request
     .get(
-      `https://www.goodreads.com/search/index.xml?key=nUHGptf8PHmpeLXVLlirA&q=${req
-        .query.q}`
+      `https://www.goodreads.com/search/index.xml?key=${process.env
+        .GOODREADS_KEY}&q=${req.query.q}`
     )
     .then(result =>
       parseString(result, (err, goodreadsResult) =>
